@@ -1,0 +1,17 @@
+Noah David 
+1.sed -'s/John/Jonathan/g' Databook
+2.sed '1d;2d;3d' datebook
+3.sed -n '5,10p' datebook 
+4.sed '/lane/d' datebook
+5.sed -n -e '/[0-9]\{9\}:1[12]\//p' datebook
+6.sed -e '/^Fred/a\*** '
+7.sed -e 's/.*Jose.*/JOSE HAS RETIRED\./g' datebook
+8.sed -e '/Popeye/s#[0-9][0-9]*/[0-9][0-9]*/[0-9][0-9]#11/14/46#g'datebook
+9.sed -e '/^[ \t\n]*$/d' datebook
+10
+a.1 i\PERSONNEL FILE
+b./500$/d
+c.s/\(^[A-Za-z]*\)\([ \t]*\)\([A-Za-z]*\):\(.*\)$/\3\2\1:\4/g
+d.$a\THE END
+
+I dont think ive hated an assignment more thanks for the fun

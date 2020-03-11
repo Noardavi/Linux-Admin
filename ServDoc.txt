@@ -1,0 +1,52 @@
+Centos Documentation
+
+Two linux servers
+https://ubuntu.com/download/server
+Ubuntu Server 18.04.4 LTS
+
+http://isoredirect.centos.org/centos/8/isos/x86_64/
+Centos 7.0-1406
+
+checked  for updates 3/11/2020
+
+User Name Ndavid
+
+Installs
+open ssh on both machines for Putty connection]\
+
+The NIC is set to bridged to allow file sharing from host machine using filezilla (requires open SSH to be running)
+To download open ssh type "sudo apt-get install openssh-server"
+enable the service type "sudo systemctl enable ssh"
+start the ssh service type "sudo systemctl start ssh"
+test login with putty to confirm
+
+installed Fail2Ban
+
+Centos7
+yum update && yum install epel-release
+yum install fail2ban
+yum install sendmail
+systemctl start fail2ban
+systemctl enable fail2ban
+
+Ubuntu
+apt-get update && apt-get upgrade -y
+apt-get install fail2ban
+ufw allow ssh
+ufw enable
+
+Both servers have 20gb of hard drive space and 4gb of ram
+
+Data backed up on both servers on 3/10/2020
+
+After backup I password protected both servers GRUB
+https://www.tecmint.com/password-protect-grub-in-linux/ 
+
+changed port for SSH to 1048 as a security measure
+
+Enabled IP tables
+
+
+
+
+
