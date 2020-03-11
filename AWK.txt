@@ -1,0 +1,32 @@
+1. awk -F: '{print $2}' lab3.data
+2. awk -F: '/Dan/ {print $2}' lab3.data
+3. awk -F: '/Susan/ {print $1,$2}' lab3.data
+4. awk '$2~/^D/{print $2}' lab3.data
+5. awk '$1~/^(C|E)/{print $1}' lab3.data
+6. awk '/^....\>/{print $1}' lab3.data
+7. awk '/916/ {print $1,$2}' lab3.data
+8. awk -F: '/Mike/ {print "$"$3,"$"$4,"$"$5}' lab3.data
+9. awk -F"[ :]" '{print $2 ", " $1}' lab3.data
+10.#awk -F"[: ]" -f facts lab3.data  use this to run the script
+   BEGIN {FS=":"}
+   /Savage/{print $1,$2}
+   $1~/Chet$/{print $5,$6,$7}
+   $3~/250$/{print $1,$2}
+
+1. awk -F '[: ]' '$6>100{print $1,$2,$3 $4}' lab4.data
+2. awk -F '[: ]' '$7<85{print $1,$2,$3 $4}' lab4.data
+3. awk -F: '($5>=90)&&($5<=150){print $1,$2}' lab4.data
+4. awk -F '[: ]' '($5+$6+47)<800{print $1}' lab4.data
+5. awk -F '[: ]' '($5+$6+$7)/1>200{print $1,$2,$3 $4}' lab4.data
+6. awk -F '[: ]' '$3!~/(916)/{print}' lab4.data
+7. awk '{print NR,$0}' lab4.data
+8. awk -F '[: ]' '{print $1,$2,$5+$6+$7}' lab4.data
+9. awk -F '[: ]' '/^\<Chet\>/{print $6+10}' lab4.data
+
+
+
+
+
+
+
+
